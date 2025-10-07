@@ -20,66 +20,23 @@
   <meta name="twitter:card" content="summary_large_image" />
 
  <style>
-  /* ===== 66GAME GOLD/MAROON THEME (from your logo) ===== */
+  /* === SAFE THEME OVERRIDE: hanya ganti warna brand === */
   :root{
-    /* Background & text */
-    --bg:#230b0c;         /* latar sangat gelap, nuansa marun */
-    --bg-2:#390e0e;       /* panel / area sekunder */
-    --card:#612716;       /* kartu/kontainer */
-    --text:#fff;
-    --muted:#f8d88c99;    /* emas transparan utk teks sekunder */
-
-    /* Brand colors (gold + maroon) */
-    --primary:#f8d88c;    /* emas utama */
-    --primary-2:#c77b34;  /* emas/tembaga untuk gradasi */
-    --accent:#750c0e;     /* marun aksen (tombol/hover) */
+    /* dari logo: emas & marun */
+    --primary-600: #c77b34;  /* tembaga/emas gelap */
+    --primary-500: #f8d88c;  /* emas utama */
+    --primary-400: #f8d88c;  /* highlight */
+    --accent-500:  #750c0e;  /* marun aksen */
   }
 
-  body{
-    background:
-      radial-gradient(1000px 500px at 80% -10%, rgba(248,216,140,.20), transparent 60%),
-      radial-gradient(800px 400px at -10% 30%, rgba(117,12,14,.25), transparent 55%),
-      var(--bg);
+  /* pastikan tombol pakai gradien brand (kalau CSS lama berbeda) */
+  .btn-primary,
+  .btn {
+    background: linear-gradient(135deg, var(--accent-500), var(--primary-500));
+    color: #2a120c; /* teks kontras dgn emas */
+    box-shadow: 0 6px 18px rgba(199,123,52,.45);
   }
-
-  /* Kartu/section */
-  .card{
-    background:
-      linear-gradient(180deg, rgba(97,39,22,.75), rgba(35,11,12,.95));
-    border:1px solid rgba(248,216,140,.18);
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-  }
-
-  /* Logo badge */
-  .logo{
-    background:linear-gradient(135deg, var(--primary), var(--primary-2));
-    box-shadow:0 10px 24px rgba(199,123,52,.4);
-  }
-
-  /* Tombol utama */
-  .btn{
-    color:#2a120c;
-    background:linear-gradient(135deg, var(--primary), var(--primary-2));
-    box-shadow:0 6px 18px rgba(199,123,52,.45);
-  }
-  .btn:hover{ filter:brightness(1.06); transform:translateY(-1px) }
-  .btn:active{ transform:translateY(0) }
-
-  /* Kotak fakta / badge */
-  .fact{
-    background:rgba(117,12,14,.18);
-    border:1px solid rgba(248,216,140,.22);
-  }
-  .fact b{ color:var(--muted) }
-
-  /* Link bantuan */
-  .helpers a{ color:var(--primary); }
-  .helpers a:hover{ color:#ffe7a3; text-decoration:underline }
-
-  /* Header/teks kecil */
-  .sub, .hint, .foot{ color:var(--muted) }
 </style>
-
 </head>
 <body>
   <main class="card" role="main">
