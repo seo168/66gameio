@@ -7,9 +7,10 @@
   <meta name="description" content="Download the latest 66GAME APK for Android. Version 1.0.4 • ~20 MB • Welcome Bonus ₹500. Fast direct link." />
   <link rel="canonical" href="https://66game.io/" />
 
-  <!-- Favicon & app icons -->
+  <!-- Favicon & app icons (improved) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
   <meta name="theme-color" content="#230b0c" />
 
@@ -59,14 +60,18 @@
 
     .row{display:flex; align-items:center; gap:12px; margin-bottom:8px}
 
-    /* === LOGO IMAGE ===
-       Ganti src="/assets/logo.png" di <img> di bawah.
-       Atur width/height untuk cegah layout shift (CLS). */
+    /* === LOGO IMAGE === */
     .logo{
       width:42px; height:42px; border-radius:10px; flex:0 0 42px;
-      object-fit:cover; display:block;
+      object-fit:cover; display:inline-block; vertical-align:middle;
       box-shadow:0 10px 24px rgba(199,123,52,.45);
-      background:#2a120c; /* fallback jika PNG transparan */
+      background:#2a120c; /* fallback bg for transparent PNG */
+    }
+    /* Fallback badge (only shown if <img> fails to load) */
+    .logo-fallback{
+      width:42px; height:42px; border-radius:10px; flex:0 0 42px; display:none;
+      background:linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow:0 10px 24px rgba(199,123,52,.45);
     }
 
     h1{margin:0 0 6px; font-size:28px}
@@ -119,8 +124,11 @@
 <body>
   <main class="card" role="main">
     <div class="row">
-      <!-- Pakai gambar logo kamu -->
-      <img class="logo" src="/assets/logo.png" alt="66GAME logo" width="42" height="42" />
+      <!-- Logo image with cache-buster + fallback badge -->
+      <img class="logo" src="/assets/logo.png?v=3" alt="66GAME logo" width="42" height="42"
+           onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='inline-block';" />
+      <span id="logo-fallback" class="logo-fallback" aria-hidden="true"></span>
+
       <div>
         <h1>Download 66GAME APK</h1>
         <div class="sub">Direct Android APK — via 66game.io</div>
@@ -156,19 +164,5 @@
       Disclaimer: 66game.io only links to a publicly available APK. Use responsibly and follow local laws.
     </div>
   </main>
-
-  <!-- Optional: fallback jika logo tidak ditemukan -->
-  <script>
-    (function(){
-      var img = document.querySelector('.logo');
-      if(!img) return;
-      img.addEventListener('error', function(){
-        // fallback ke gradient gold kalau /assets/logo.png belum diupload
-        img.style.background = 'linear-gradient(135deg, var(--primary), var(--primary-2))';
-        img.removeAttribute('src');
-        img.setAttribute('aria-label','66GAME');
-      }, {once:true});
-    })();
-  </script>
 </body>
 </html>
