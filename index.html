@@ -7,7 +7,7 @@
   <meta name="description" content="Download the latest 66GAME APK for Android. Version 1.0.4 • ~20 MB • Welcome Bonus ₹500. Fast direct link." />
   <link rel="canonical" href="https://6game.io/" />
 
-  <!-- Favicon (siapkan file /favicon.ico dan opsional /apple-touch-icon.png di root 6game.io) -->
+  <!-- Favicon (siapkan /favicon.ico dan opsional /apple-touch-icon.png di root 6game.io) -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -20,21 +20,12 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    /* ==================== THEME (meniru 66gameblog.com) ====================
-       Palet: latar gelap (#0e101b), kartu (#14172a/#1b1f36), ungu (#6a5cff),
-       aksen toska (#00e0b8). Jika ingin 100% identik, kamu bisa
-       menyesuaikan variabel di bawah tanpa ubah markup. */
+    /* Tema mengikuti 66gameblog.com (gelap, ungu, toska) */
     :root{
-      --bg:#0e101b;
-      --bg-2:#14172a;
-      --card:#1b1f36;
-      --text:#ffffff;
-      --muted:#aab0c6;
-      --primary:#6a5cff;   /* ungu */
-      --primary-2:#7b6dff; /* ungu gradien */
-      --accent:#00e0b8;    /* toska */
+      --bg:#0e101b; --bg-2:#14172a; --card:#1b1f36;
+      --text:#ffffff; --muted:#aab0c6;
+      --primary:#6a5cff; --primary-2:#7b6dff; --accent:#00e0b8;
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -45,30 +36,36 @@
         radial-gradient(1000px 500px at -10% 20%, rgba(0,224,184,.12), transparent 55%),
         var(--bg);
       color:var(--text);
-      display:flex; align-items:center; justify-content:center;
-      padding:24px;
+      display:flex; align-items:center; justify-content:center; padding:24px;
     }
     .card{
       width:min(760px,100%);
       background:linear-gradient(180deg, rgba(27,31,54,.72), rgba(14,16,27,.92));
       border:1px solid rgba(255,255,255,.08);
-      border-radius:18px;
-      padding:28px;
+      border-radius:18px; padding:28px;
       box-shadow:0 10px 30px rgba(0,0,0,.35);
     }
-
     .row{display:flex; align-items:center; gap:12px; margin-bottom:8px}
     .logo{
-      width:42px; height:42px; border-radius:10px; flex:0 0 42px;
+      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
       background:linear-gradient(135deg, var(--primary), var(--accent));
       box-shadow:0 10px 24px rgba(106,92,255,.35);
     }
     h1{margin:0 0 6px; font-size:28px}
-    .sub{color:var(--muted); margin-bottom:20px}
+    .sub{color:var(--muted); margin-bottom:16px}
+
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:14px 22px; border-radius:999px; font-weight:800; letter-spacing:.2px;
+      color:#041016; text-decoration:none;
+      background:linear-gradient(135deg, var(--accent), var(--primary-2));
+      box-shadow:0 6px 20px rgba(0,224,184,.35);
+    }
+    .btn-wrap{margin:8px 0 18px}
 
     .facts{
       display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px;
-      margin:14px 0 22px;
+      margin:4px 0 12px;
     }
     .fact{
       background:rgba(123,109,255,.10);
@@ -78,13 +75,10 @@
     .fact b{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
     .fact span{font-weight:800}
 
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:14px 22px; border-radius:999px; font-weight:800; letter-spacing:.2px;
-      color:#041016; text-decoration:none;
-      background:linear-gradient(135deg, var(--accent), var(--primary-2));
-      box-shadow:0 6px 20px rgba(0,224,184,.35);
-    }
+    .helpers{margin-top:10px}
+    .helpers a{color:var(--accent); text-decoration:none}
+    .helpers a:hover{text-decoration:underline}
+
     .hint{font-size:12px; color:var(--muted); margin-top:12px}
     .foot{font-size:12px; color:var(--muted); margin-top:18px; border-top:1px solid rgba(255,255,255,.06); padding-top:12px}
 
@@ -104,27 +98,33 @@
       </div>
     </div>
 
-    <!-- Data dari App Info 66gameblog -->
+    <!-- ✅ Tombol Download dipindah ke atas keterangan -->
+    <div class="btn-wrap">
+      <a class="btn"
+         href="https://dvnm6cw04vasl.cloudfront.net/apk/66game.1qbxp.apk"
+         rel="nofollow" target="_blank" aria-label="Download 66GAME APK">
+        ⬇️ Download APK
+      </a>
+    </div>
+
+    <!-- Keterangan / Facts -->
     <div class="facts" aria-label="App facts">
       <div class="fact"><b>Version</b><span>1.0.4</span></div>
       <div class="fact"><b>Size</b><span>~20 MB</span></div>
       <div class="fact"><b>Welcome Bonus</b><span>₹500</span></div>
     </div>
 
-    <!-- LINK DOWNLOAD RESMI (CloudFront dari 66gameblog App Info) -->
-    <p>
-      <a class="btn" href="https://dvnm6cw04vasl.cloudfront.net/apk/66game.1qbxp.apk"
-         rel="nofollow" target="_blank" aria-label="Download 66GAME APK">
-        ⬇️ Download APK
-      </a>
-    </p>
+    <!-- Can't install? → direct link panduan -->
+    <div class="helpers">
+      Can’t install? <a href="https://66gameblog.com/how-to-download/" target="_blank" rel="noopener">Follow the install guide</a>
+    </div>
 
     <div class="hint">
-      Sumber data & link: halaman App Info dan beranda 66gameblog.com (link CloudFront, versi, bonus). :contentReference[oaicite:2]{index=2}
+      Sumber data & link: 66gameblog.com (App Info / CloudFront). Bonus & ketersediaan dapat berubah (18+).
     </div>
 
     <div class="foot">
-      Disclaimer: 6game.io hanya menautkan file APK yang tersedia publik. Gunakan dengan tanggung jawab & patuhi hukum setempat (18+).
+      Disclaimer: 6game.io hanya menautkan file APK yang tersedia publik. Gunakan dengan tanggung jawab & patuhi hukum setempat.
     </div>
   </main>
 </body>
