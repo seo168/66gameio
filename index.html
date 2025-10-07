@@ -19,73 +19,56 @@
   <meta property="og:image" content="https://6game.io/og-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <style>
-    /* Tema mengikuti 66gameblog.com (gelap, ungu, toska) */
+ <style>
     :root{
-      --bg:#0e101b; --bg-2:#14172a; --card:#1b1f36;
-      --text:#ffffff; --muted:#aab0c6;
-      --primary:#6a5cff; --primary-2:#7b6dff; --accent:#00e0b8;
+      --bg:#230b0c;         
+      --bg-2:#390e0e;      
+      --card:#612716;      
+      --text:#fff;
+      --muted:#f8d88c99;    
+
+      --primary:#f8d88c;    
+      --primary-2:#c77b34; 
+      --accent:#750c0e; 
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+
     body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
       background:
-        radial-gradient(1200px 600px at 80% -10%, rgba(106,92,255,.25), transparent 60%),
-        radial-gradient(1000px 500px at -10% 20%, rgba(0,224,184,.12), transparent 55%),
+        radial-gradient(1000px 500px at 80% -10%, rgba(248,216,140,.20), transparent 60%),
+        radial-gradient(800px 400px at -10% 30%, rgba(117,12,14,.25), transparent 55%),
         var(--bg);
-      color:var(--text);
-      display:flex; align-items:center; justify-content:center; padding:24px;
     }
+
     .card{
-      width:min(760px,100%);
-      background:linear-gradient(180deg, rgba(27,31,54,.72), rgba(14,16,27,.92));
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:18px; padding:28px;
+      background:
+        linear-gradient(180deg, rgba(97,39,22,.75), rgba(35,11,12,.95));
+      border:1px solid rgba(248,216,140,.18);
       box-shadow:0 10px 30px rgba(0,0,0,.35);
     }
-    .row{display:flex; align-items:center; gap:12px; margin-bottom:8px}
+
     .logo{
-      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
-      background:linear-gradient(135deg, var(--primary), var(--accent));
-      box-shadow:0 10px 24px rgba(106,92,255,.35);
+      background:linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow:0 10px 24px rgba(199,123,52,.4);
     }
-    h1{margin:0 0 6px; font-size:28px}
-    .sub{color:var(--muted); margin-bottom:16px}
 
     .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:14px 22px; border-radius:999px; font-weight:800; letter-spacing:.2px;
-      color:#041016; text-decoration:none;
-      background:linear-gradient(135deg, var(--accent), var(--primary-2));
-      box-shadow:0 6px 20px rgba(0,224,184,.35);
+      color:#2a120c;
+      background:linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow:0 6px 18px rgba(199,123,52,.45);
     }
-    .btn-wrap{margin:8px 0 18px}
+    .btn:hover{ filter:brightness(1.06); transform:translateY(-1px) }
+    .btn:active{ transform:translateY(0) }
 
-    .facts{
-      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px;
-      margin:4px 0 12px;
-    }
     .fact{
-      background:rgba(123,109,255,.10);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:14px; padding:12px 14px;
+      background:rgba(117,12,14,.18);
+      border:1px solid rgba(248,216,140,.22);
     }
-    .fact b{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
-    .fact span{font-weight:800}
+    .fact b{ color:var(--muted) }
 
-    .helpers{margin-top:10px}
-    .helpers a{color:var(--accent); text-decoration:none}
-    .helpers a:hover{text-decoration:underline}
-
-    .hint{font-size:12px; color:var(--muted); margin-top:12px}
-    .foot{font-size:12px; color:var(--muted); margin-top:18px; border-top:1px solid rgba(255,255,255,.06); padding-top:12px}
-
-    @media (max-width:520px){
-      h1{font-size:24px}
-      .facts{grid-template-columns:1fr}
-    }
+    .helpers a{ color:var(--primary); }
+    .helpers a:hover{ color:#ffe7a3; text-decoration:underline }
+   
+    .sub, .hint, .foot{ color:var(--muted) }
   </style>
 </head>
 <body>
